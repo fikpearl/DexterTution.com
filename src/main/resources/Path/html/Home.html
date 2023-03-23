@@ -8,13 +8,24 @@
             background-color:#3e65da;
         }
         .container {
+            text-align: center;
+            color:white;
             position: relative;
             margin-top: 100px;
+            top: 0;
+            right: 0;
+            
         }
+
         .container img {
-            display: block;
-            width: 100%;
+            position: absolute;
+            top : 0;
+            right: 0;
+            width: 400px;
+            padding: 10px;
+
         }
+
         nav {
             position: fixed;
             z-index: 10;
@@ -122,23 +133,36 @@
         #logoSize{
             width: 160px;
             height: 100px;
-            
             float: left;
           }
-        
-        
-        .youtube-link {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            color: #000;
-            text-decoration: none;
-            font-size: 12px;
+
+          .wrapper{
+            right: 0px;
+            width: 500px;
+            padding: 10px;
+            border: 10px solid #73AD21;
+            padding: 20px;
         }
+
+        .wrapper label{
+            display: inline;
+            display: block;
+            margin: 0.5em;
+        }
+
+        .wrapper label input{
+            font-size: 1;
+            padding: 0.5em;
+        }
+
+       
+
     </style>
-    
-    
-    
+
+    <head>
+        <title>DexterTution.com</title>
+    </head>
+        
 <nav>
 	<input id="nav-toggle" type="checkbox">
 	<div class="logo">
@@ -160,14 +184,43 @@
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
+
+
 	</label>
+    
+
 </nav>
 
-<!--<div class="container">
-	<img src="https://picsum.photos/id/559/1000/1000" alt="">
-	<img src="https://picsum.photos/id/558/1000/1000" alt="">
-</div>
 
-<a class="youtube-link" href="https://youtu.be/S-JyJCVx_4Y" target="_blank">https://youtu.be/S-JyJCVx_4Y</a>-->
+<div class="container">
+
+
+    <body>
+        <br />
+
+        <h1>DEXTER<strong>TUITION</strong></h1>
+               
+        <h2>“Tsha Kule tshi wanwa nga muhovheleli.”</h2>
+        <h3>“That which is far is only reached by those who reach out.”</h3>
+        <h4> -- The Dexter Motto. </h4>
+
+
+        <img id="container img" src="https://dextertuition.com/wp-content/uploads/2023/01/tinywow_6_12802645-768x1024.png" alt="logo">
+        <div class="wrapper">
+
+            <h2>Excellent Tutors</h2>
+
+            <p>
+                We provide a one-of-a-kind tutoring experience.
+                Look no further if you want academic excellence for your child. 
+            </p>
+
+        </div>
+
+
+            
+    </body>
+    
+</div>
 
 </html>
