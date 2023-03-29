@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    
+    <title>DexterTution.com</title>
+
     <style>
+
         body {
             padding: 1;
-            margin: 1em;
+            margin: 0;
             font-family: "Pangolin", sans-serif;
             background-color:#3e65da;
         }
-        .container {
-            text-align: center;
-            color:white;
-            position: relative;
-            margin-top: 100px;
-            top: 0;
-            right: 0;
-            
-        }
 
-        .container img {
-            position: absolute;
-            top : 0;
-            right: 0;
-            width: 400px;
-            padding: 10px;
-
-        }
+        /*styling for header,logo and links*/
 
         nav {
             position: fixed;
@@ -45,7 +34,7 @@
             display: flex;
             align-items: center;
             font-size: 24px;
-            color: #fff;
+            color: black;
         }
         nav .links {
             float: right;
@@ -66,12 +55,14 @@
             font-size: 16px;
             font-weight: bold;
             color: black;
-            text-decoration: none;
+            text-decoration:none;
         }
+
         #nav-toggle {
             position: absolute;
             top: -100px;
         }
+
         nav .icon-burger {
             display: none;
             position: absolute;
@@ -79,6 +70,7 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
         nav .icon-burger .line {
             width: 30px;
             height: 5px;
@@ -87,7 +79,108 @@
             border-radius: 3px;
             transition: all .3s ease-in-out;
         }
-        @media screen and (max-width: 768px) {
+
+        .dropdown {
+            float:left;
+            display:inline-flexbox;
+          }
+          
+        .dropdown-content {
+            display: none;
+            float:inline-end;
+            background-color: grey;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+          
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border-radius: 1000px;
+        }
+
+
+        /*styling for content and images*/
+
+        .container {
+            text-align: center;
+            color:white;
+            position: relative;
+            margin-top: 100px;
+            top: 0;
+            right: 0;
+            
+        }
+
+        .container img {
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 400px;
+            padding: 10px;
+
+        }
+
+        .wrapper{
+            right: 0px;
+            width: 800px;
+            padding: 100px;
+            border: 10px solid yellow;
+            padding: 20px;
+        }
+
+        .wrappertwo {
+            float: left;
+            padding: 40px;
+            width: 400px;
+            border-radius: 100px;
+            background-color: #73AD21;
+        }
+
+        .wrapperthree{
+            float:right;
+            padding: 40px;
+            width: 400px;
+            border-radius: 100px;
+            background-color: #73AD21;
+        }
+
+        .wrapperfour{
+            float: left;
+            padding: 100px;
+            width: 400px;
+            border-radius: 400px;
+            background-color: darkmagenta;
+        }
+
+        .img {
+            float: left;
+           
+            padding: 100px;
+            width: 400px;
+            border-radius: 400px;
+        }
+        
+
+        .imageQA {
+            position: absolute;
+            padding: 100px;
+            width: 400px;
+            border-radius: 400px;
+        }
+
+    
+        .wrappersix{
+            float:right;
+            padding: 100px;
+            width: 400px;
+            border-radius: 2000px;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 1000px) {
+
             nav .logo {
                 float: none;
                 width: auto;
@@ -95,7 +188,7 @@
             }
             nav .links {
                 float: none;
-                position: fixed;
+                /*position: fixed;*/
                 z-index: 9;
                 left: 0;
                 right: 0;
@@ -135,17 +228,25 @@
             width: 160px;
             height: 100px;
             float: left;
-          }
-
-          .wrapper{
-            right: 0px;
-            width: 500px;
-            padding: 10px;
-            border: 10px solid #73AD21;
-            padding: 20px;
         }
 
-        .wrapper label{
+        .footer {
+            background-color: grey;
+            padding: 10px;
+            text-align: center;
+        }
+
+        
+
+
+
+    </style>
+</head>
+
+    
+         
+
+        <!--.wrapper label{
             display: inline;
             display: block;
             margin: 0.5em;
@@ -172,39 +273,38 @@
             background-color: #73AD21;
         }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-          }
-          
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px 16px;
-            z-index: 1;
-          }
-          
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
+        .wrapperfour{
+            float: left;
+            padding: 100px;
+            width: 400px;
+            border-radius: 400px;
+            background-color: darkmagenta;
+
+            
+        }
+
+        .wrappersix{
+            float:right;
+            padding: 100px;
+            width: 400px;
+            border-radius: 2000px;
+            background-color: red;
+        }
+
+
+        .five {
+            position: right;
+            padding: 100px;
+            width: 400px;
+            border-radius: 400px;
+            background-image:url(https://images.pexels.com/photos/5905486/pexels-photo-5905486.jpeg?auto=compress&cs=tinysrgb&w=400);
+            background-size: 35%;
+        }-->
 
         
-
-        
-
-       
-
-    </style>
-
-    <head>
-        <title>DexterTution.com</title>
-    </head>
+   
         
 <nav>
-	<input id="nav-toggle" >
 
 	<div class="logo">
         <img id="logoSize" src="data:image/png;base64,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" alt="logo">
@@ -222,38 +322,57 @@
                 <list>
 
                     <a href="ServicesWeOffer.html">
-                        <button type="button"  id="submit_button" name="Services">Services We Offer</button>
+                        <button type="button"  id="submit_button" name="services">Our Services</button>
+                    </a>
+                    <a href="Registration.html">
+                        <button type="button"  id="submit_button" name="registraton">Registration</button>
+                    </a>
+                    <a href="BookATutor.html">
+                        <button type="button"  id="submit_button" name="bookatutor">Book A Tutor</button>
+                    </a>
+                    <a href="DownloadResources.html">
+                        <button type="button"  id="submit_button" name="downloadresources">Download Resources</button>
+                    </a>
+                    <a href="Newsletter.html">
+                        <button type="button"  id="submit_button" name="newsletter">Newsletter</button>
+                    </a>
+                    <a href="Reviews.html">
+                        <button type="button"  id="submit_button" name="reviews">Reviews</button>
+                    </a>
+                    <a href="JoinTheTeam.html">
+                        <button type="button"  id="submit_button" name="join the team">Join The Team</button>
+                    </a>
+                    <a href="AboutUs.html">
+                        <button type="button"  id="submit_button" name="about us">About Us</button>
+                    </a>
+
+                    <a href="home.html">
+                        <button type="button"  id="submit_button" name="back">Back</button>
                     </a>
 
                 </list>
 
-               
-
-              <!--<p>Hello World!</p>-->
-              
+            <!--still to add more-->    
+            
             </div>
+
           </div>
         
-		
-
 	</ul>
+
 	<label for="nav-toggle" class="icon-burger">
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
 
-
 	</label>
-    
-
 </nav>
 
-
+<body>
+    
 <div class="container">
 
-
-    <body>
-        <br />
+    <br />
 
         <h1>DEXTER<strong>TUITION</strong></h1>
                
@@ -261,111 +380,124 @@
         <h3>“That which is far is only reached by those who reach out.”</h3>
         <h4> -- The Dexter Motto. </h4><br>
 
-        <br><img id="container img" src="https://dextertuition.com/wp-content/uploads/2023/01/tinywow_6_12802645-768x1024.png" alt="logo"><br>
+       <br><img id="container img" src="https://dextertuition.com/wp-content/uploads/2023/01/tinywow_6_12802645-768x1024.png" alt="logo"><br>
 
-        <div class="wrapper">
+       <div class="wrapper">
 
-            <h2>Excellent Tutors</h2>
-
-            <p>
-                <h2>We provide a one-of-a-kind tutoring experience.</h2>
-                <h3>Look no further if you want academic excellence for your child.</h3>
-            </p>
-
-        </div>
-
-        <br />
-
-        <br><h1><strong>WHAT WE OFFER</strong></h1><br>
-
-        <h3>We strive to ensure that every student can reach their full academic potential while in the basic education system, as this is where their potential career paths are formed.</h3>
-        <h3>Students who work with us will notice a significant improvement as a result of our dedicated assistance
-            in their grade.</h3><br>
-        
-
-        <div class="wrappertwo">
-            <p> 
-                <h3>ONLINE CLASSES</h3>
-                We take pride in being able to provide tutoring services in the comfort of your own home.
-                Our online classes are delivered through platforms like Zoom, Google Meet, and MSTeams. 
-            </p>
-        </div>
-
-        <div class="wrapperthree">
-
-            <p> 
-                <h3>GROUP SATURDAY CLASSES</h3>
-                We have collaborated with local schools to hold Saturday classes on their campuses.
-                These classes are designed to help matriculants prepare for their final exams.                                             
-            </p>
-        </div>
-        
-        <div class="wrappertwo">
-            <p> 
-                <h3>PRIVATE CLASSES</h3>
-                We have hired qualified and dedicated tutors all over the country.
-                Booking a tutor is as simple as hailing an Uber.
-                Our tutors are always available to match with potential students from all over South Africa. 
-            </p>   
-            
-        </div>
-
-        <div class="wrapperthree">
-
-            <p> 
-                <h3>AU PAIR</h3>
-                This service is useful for parents who have a lot on their plates and require a second right hand.
-                Au Pairs help with daily tasks such as packing lunches for students, driving them to school, transporting them to extracurricular activities, tutoring, and more. 
-            </p>
-            
-        </div>
-
-        <!--<div class="wrapper">
-
-            <br />
-
-            <br><h1><strong>WHY US</strong></h1><br>
-
-            <p>At Dexter Tuition, we believe that each student has unique needs that require an individualized, attentive approach when dealing with.
-            As certain topics are interrelated, we access the students' memory, problem solving, critical thinking, application skills, and integration.
-            This assessment enables us to take a more deliberate approach to the problem areas. </p><br>
-
-        </div>-->
-
-        <!--<div class="wrapper">
-
-            <br />
-
-            <br><h1><strong>WHY US</strong></h1><br>
-
-            <p>To ensure that our tutors and students have a long-term and sustainable relationship that ensures that the goal of enrolling with Dexter Tuition is met.</p><br>
-
-            <p>
-            We conduct ongoing quality checks on our tutors, which allow us to conduct performance reviews and maintain quality teaching standards.
-            This is insufficient to ensure improved results. 
-            </p>
-
-            <p>
-                So, in addition to qualifications, we hire tutors who have:
-                Academic expertise in their tutoring areas, a natural aptitude for teaching, and a dedication to Dexter Tuition and its students.
-                • Finally, instructors who exhibit initiative 
-            </p>
-
-        </div>-->
-        
-
-
-        <!--footer with address and contact details-->
-
-        
+        <h2>Excellent Tutors</h2>
     
- 
-    </body>
+        <p>
+            <h3>We provide a one-of-a-kind tutoring experience.</h3>
+            <h3>Look no further if you want academic excellence for your child.</h3>
+        </p>
+    
+    </div>
+
 </div>
 
-</html>
+
+<div class="container"> 
+
+<br />
+
+<br><h1><strong>WHAT WE OFFER</strong></h1><br>
+
+<h3>We strive to ensure that every student can reach their full academic potential while in the basic education system, as this is where their potential career paths are formed.
+    Students who work with us will notice a significant improvement as a result of our dedicated assistance
+    in their grade.
+</h3>
+
+    <div class="wrappertwo">
+        <p> 
+            <h3>ONLINE CLASSES</h3>
+            We take pride in being able to provide tutoring services in the comfort of your own home.
+            Our online classes are delivered through platforms like Zoom, Google Meet, and MSTeams. 
+        </p>
+    </div>
+    
+    <div class="wrapperthree">
+    
+        <p> 
+            <h3>GROUP SATURDAY CLASSES</h3>
+            We have collaborated with local schools to hold Saturday classes on their campuses.
+            These classes are designed to help matriculants prepare for their final exams.                                             
+        </p>
+    </div>
+    
+    <div class="wrappertwo">
+        <p> 
+            <h3>PRIVATE CLASSES</h3>
+            We have hired qualified and dedicated tutors all over the country.
+            Booking a tutor is as simple as hailing an Uber.
+            Our tutors are always available to match with potential students from all over South Africa. 
+        </p>   
+        
+    </div>
+    
+    <div class="wrapperthree">
+    
+        <p> 
+            <h3>AU PAIR</h3>
+            This service is useful for parents who have a lot on their plates and require a second right hand.
+            Au Pairs help with daily tasks such as packing lunches for students, driving them to school, transporting them to extracurricular activities, tutoring, and more. 
+        </p>
+    </div>
+    
+</div>
+
+
+<div class="container">
 
 
 
+    <div class="wrapperfour">
+
+        <br />
+    
+        <br><h1><strong>WHY US</strong></h1><br>
+    
+        <h3>At Dexter Tuition, we believe that each student has unique needs that require an individualized, attentive approach when dealing with.
+        As certain topics are interrelated, we access the students' memory, problem solving, critical thinking, application skills, and integration.
+        This assessment enables us to take a more deliberate approach to the problem areas. </h3><br>
+
+    <!--<img class="img" src="https://images.pexels.com/photos/5905486/pexels-photo-5905486.jpeg?auto=compress&cs=tinysrgb&w=400" ><br>-->
 
     
+    </div>
+
+    
+    <div class="wrappersix">
+
+        <br />
+    
+        <br><h1><strong>QUALITY ASSURANCE</strong></h1><br>
+    
+        <p>To ensure that our tutors and students have a long-term and sustainable relationship that ensures that the goal of enrolling with Dexter Tuition is met.</p><br>
+        <p>
+        We conduct ongoing quality checks on our tutors, which allow us to conduct performance reviews and maintain quality teaching standards.
+        This is insufficient to ensure improved results. 
+        </p>
+    
+        <p>
+            So, in addition to qualifications, we hire tutors who have:
+            • Academic expertise in their tutoring areas.
+            • A natural aptitude for teaching.
+            • A dedication to Dexter Tuition and its students.
+            • And Finally, instructors who exhibit initiative.
+        </p>
+
+       <!-- <img class="imageQA" src="https://images.pexels.com/photos/6929192/pexels-photo-6929192.jpeg?auto=compress&cs=tinysrgb&w=400">-->
+    </div>    
+</div>
+
+
+<!--<div class="footer">
+
+    <h3>footer</h3>
+
+</div>-->
+
+
+</body>
+</html>
+  
