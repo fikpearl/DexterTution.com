@@ -80,26 +80,60 @@
             transition: all .3s ease-in-out;
         }
 
-        .dropdown {
-            float:left;
-            display:inline-flexbox;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: yellow;
           }
           
-        .dropdown-content {
+          li {
+            float: left;
+          }
+          
+          li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          
+          li a:hover, .dropdown:hover .dropbtn {
+            background-color: goldenrod;
+          }
+          
+          li.dropdown {
+            display: inline-block;
+            background-color: #3e65da;
+          }
+          
+          .dropdown-content {
             display: none;
-            float:inline-end;
-            background-color: grey;
+            position: absolute;
+            background-color: yellowgreen;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px 16px;
             z-index: 1;
-        }
+          }
           
-        .dropdown:hover .dropdown-content {
+          .dropdown-content a {
+            color: yellow;
+            padding: 12px 16px;
+            text-decoration: none;
             display: block;
-            border-radius: 1000px;
-        }
+            text-align: left;
+          }
+          
+          .dropdown-content a:hover {background-color:#3e65da;}
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: grey;
+          }
 
+          
 
         /*styling for content and images*/
 
@@ -322,7 +356,7 @@
                 <list>
 
                     <a href="ServicesWeOffer.html">
-                        <button type="button"  id="submit_button" name="services">Our Services</button>
+                        <button type="button"  id="submit_button" name="Services">Our Services</button>
                     </a>
                     <a href="Registration.html">
                         <button type="button"  id="submit_button" name="registraton">Registration</button>
@@ -346,7 +380,7 @@
                         <button type="button"  id="submit_button" name="about us">About Us</button>
                     </a>
 
-                    <a href="home.html">
+                    <a href="Home.html">
                         <button type="button"  id="submit_button" name="back">Back</button>
                     </a>
 
