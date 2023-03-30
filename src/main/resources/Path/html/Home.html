@@ -10,8 +10,9 @@
         body {
             padding: 1;
             margin: 0;
-            font-family: "Pangolin", sans-serif;
+            font-family: "Brush Script MT", cursive;
             background-color:#3e65da;
+        
         }
 
         /*styling for header,logo and links*/
@@ -85,7 +86,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: yellow;
+            background-color:yellow;
           }
           
           li {
@@ -144,25 +145,23 @@
             margin-top: 100px;
             top: 0;
             right: 0;
-            
         }
 
-        .container img {
-            position: absolute;
-            top:0;
-            right: 0;
-            width: 400px;
-            padding: 10px;
-
-        }
-
+    
         .wrapper{
             right: 0px;
-            width: 800px;
-            padding: 100px;
-            border: 10px solid yellow;
-            padding: 20px;
+            width: 600px;
+            padding: 40px;
+            background-color: #ffffe0 ;
+            border-radius: 1000px;
+            color:black;
         }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+          }
 
         .wrappertwo {
             float: left;
@@ -188,28 +187,12 @@
             background-color: darkmagenta;
         }
 
-        .img {
-            float: left;
-           
-            padding: 100px;
-            width: 400px;
-            border-radius: 400px;
-        }
-        
 
-        .imageQA {
-            position: absolute;
-            padding: 100px;
-            width: 400px;
-            border-radius: 400px;
-        }
-
-    
         .wrappersix{
             float:right;
             padding: 100px;
             width: 400px;
-            border-radius: 2000px;
+            border-radius: 400px;
             background-color: red;
         }
 
@@ -222,7 +205,6 @@
             }
             nav .links {
                 float: none;
-                /*position: fixed;*/
                 z-index: 9;
                 left: 0;
                 right: 0;
@@ -270,74 +252,10 @@
             text-align: center;
         }
 
-        
-
-
-
     </style>
 </head>
 
-    
-         
-
-        <!--.wrapper label{
-            display: inline;
-            display: block;
-            margin: 0.5em;
-        }
-
-        .wrapper label input{
-            font-size: 1;
-            padding: 0.5em;
-        }
-
-        .wrappertwo {
-            float: left;
-            padding: 40px;
-            width: 400px;
-            border-radius: 100px;
-            background-color: #73AD21;
-        }
-
-        .wrapperthree{
-            float:right;
-            padding: 40px;
-            width: 400px;
-            border-radius: 100px;
-            background-color: #73AD21;
-        }
-
-        .wrapperfour{
-            float: left;
-            padding: 100px;
-            width: 400px;
-            border-radius: 400px;
-            background-color: darkmagenta;
-
-            
-        }
-
-        .wrappersix{
-            float:right;
-            padding: 100px;
-            width: 400px;
-            border-radius: 2000px;
-            background-color: red;
-        }
-
-
-        .five {
-            position: right;
-            padding: 100px;
-            width: 400px;
-            border-radius: 400px;
-            background-image:url(https://images.pexels.com/photos/5905486/pexels-photo-5905486.jpeg?auto=compress&cs=tinysrgb&w=400);
-            background-size: 35%;
-        }-->
-
-        
    
-        
 <nav>
 
 	<div class="logo">
@@ -414,8 +332,8 @@
         <h3>“That which is far is only reached by those who reach out.”</h3>
         <h4> -- The Dexter Motto. </h4><br>
 
-       <br><img id="container img" src="https://dextertuition.com/wp-content/uploads/2023/01/tinywow_6_12802645-768x1024.png" alt="logo"><br>
-
+       <br><img id="container img" src="https://dextertuition.com/wp-content/uploads/2023/01/tinywow_6_12802645-768x1024.png" alt="logo" style="position: absolute;top:0;right: 0;width: 500px;padding: 10px;z-index: -1;opacity: 0.9;border-radius: 50%;"><br>
+       
        <div class="wrapper">
 
         <h2>Excellent Tutors</h2>
@@ -436,10 +354,12 @@
 
 <br><h1><strong>WHAT WE OFFER</strong></h1><br>
 
-<h3>We strive to ensure that every student can reach their full academic potential while in the basic education system, as this is where their potential career paths are formed.
-    Students who work with us will notice a significant improvement as a result of our dedicated assistance
-    in their grade.
-</h3>
+    <div class="center">
+        <p>We strive to ensure that every student can reach their full academic potential while in the basic education system, as this is where their potential career paths are formed.
+        Students who work with us will notice a significant improvement as a result of our dedicated assistance
+        in their grade.
+        </p>
+    </div>
 
     <div class="wrappertwo">
         <p> 
@@ -482,8 +402,6 @@
 
 <div class="container">
 
-
-
     <div class="wrapperfour">
 
         <br />
@@ -494,12 +412,12 @@
         As certain topics are interrelated, we access the students' memory, problem solving, critical thinking, application skills, and integration.
         This assessment enables us to take a more deliberate approach to the problem areas. </h3><br>
 
-    <!--<img class="img" src="https://images.pexels.com/photos/5905486/pexels-photo-5905486.jpeg?auto=compress&cs=tinysrgb&w=400" ><br>-->
-
-    
     </div>
 
-    
+    <div >
+    <img src="https://images.pexels.com/photos/5905486/pexels-photo-5905486.jpeg?auto=compress&cs=tinysrgb&w=400" style="float: left;padding: 100px;width: 250px;border-radius:40%;" ><br>
+    </div>
+
     <div class="wrappersix">
 
         <br />
@@ -520,18 +438,23 @@
             • And Finally, instructors who exhibit initiative.
         </p>
 
-       <!-- <img class="imageQA" src="https://images.pexels.com/photos/6929192/pexels-photo-6929192.jpeg?auto=compress&cs=tinysrgb&w=400">-->
-    </div>    
+    </div> 
+    
+    <div >
+        <img src="https://images.pexels.com/photos/6929192/pexels-photo-6929192.jpeg?auto=compress&cs=tinysrgb&w=400" style="float:right;padding: 100px;width: 250px;border-radius: 40%;">
+
+    </div>
+
+    <!--<footer>
+
+        <h3>footer</h3>
+    
+    </footer>--> 
+
 </div>
-
-
-<!--<div class="footer">
-
-    <h3>footer</h3>
-
-</div>-->
-
-
 </body>
+
+
+
 </html>
   
