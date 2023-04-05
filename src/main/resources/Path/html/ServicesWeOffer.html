@@ -7,14 +7,15 @@
 
     <style>
 
+        * {
+            box-sizing:content-box;
+        }
+
         body {
-            padding: 1;
-            margin: 0;
+            padding: 10px;
             font-family: "Brush Script MT", cursive;
             background-color:white;
-            height: 100vh;
-            display: flexbox;
-        
+            height: 100%;
         }
 
         /*styling for header,logo and links*/
@@ -146,16 +147,19 @@
             margin-top: 100px;
             top: 0;
             right: 0;
+            min-height: 100%;
         }
 
     
         .wrapper{
-            right: 0px;
+            right: 0;
             width: 600px;
             padding: 40px;
+            overflow:auto;
             background-color: yellow ;
             border-radius: 1000px;
             color:black;
+            padding-bottom: 100px;
         }
 
         .center {
@@ -165,6 +169,7 @@
         }
 
         .wrappertwo {
+            overflow: auto;
             float: left;
             padding: 40px;
             width: 400px;
@@ -173,6 +178,7 @@
         }
 
         .wrapperthree{
+            overflow: auto;
             float:right;
             padding: 40px;
             width: 400px;
@@ -181,6 +187,7 @@
         }
 
         .wrapperfour{
+            overflow: auto;
             float: right;
             padding: 100px;
             width: 400px;
@@ -190,55 +197,35 @@
 
 
         .wrappersix{
+            overflow: auto;
             float:left;
             padding: 40px;
             width: 600px;
             border-radius: 4000px;
             background-color: #0f52ba;
+
         }
 
-        @media screen and (max-width: 100px) {
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {   
+            float: left;
+            width: 75%;
+        }
+  
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
 
-            nav .logo {
-                float: none;
-                width: auto;
-                justify-content: center;
-            }
-            nav .links {
-                float: none;
-                z-index: 9;
-                left: 0;
-                right: 0;
-                top: 100px;
-                bottom: 90%;
-                width: auto;
-                height: auto;
-                flex-direction: column;
-                justify-content: space-evenly;
-                background-color: rgba(0,0,0,.8);
-                overflow: hidden;
-                box-sizing: border-box;
-                transition: all .5s ease-in-out;
-            }
-            nav .links a {
-                font-size: 20px;
-            }
-            nav :checked ~ .links {
-                bottom: 0;
-            }
-            nav .icon-burger {
-                display: block;
-            }
-            nav :checked ~ .icon-burger .line:nth-child(1) {
-                transform: translateY(10px) rotate(225deg);
-            }
-            nav :checked ~ .icon-burger .line:nth-child(3) {
-                transform: translateY(-10px) rotate(-225deg);
-            }
-            nav :checked ~ .icon-burger .line:nth-child(2) {
-                opacity: 0;
-            }
-            
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {   
+                width: 100%;
+                padding: 0;
+              }
+           
         }
 
         #logoSize{
@@ -247,17 +234,33 @@
             float: left;
         }
 
+        .footer-text{
+            float: center;
+            padding: 0;
+            margin: 0;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: column;
+            color: black;
+
+        }
+
         .footer {
             background-color: grey; 
-            position: fixed;
-            bottom: 0;
-            padding: 20px; 
-            text-align: center;
+            position: relative;
+            height:100px;
+            margin-top: -100px;
+            clear:both;
         }
+
+
 
     </style>
 </head>
 
+   
 <nav>
 
 	<div class="logo">
@@ -324,28 +327,44 @@
 
 <body>
     
-    <div class="container">
+<div class="container">
 
-        <br />
+    <br />
+
+        <h1>DEXTER<strong>TUITION</strong></h1>
+       
     
-            <h1>DEXTER<strong>TUITION</strong></h1>
-                   
-            <h2>“Tsha Kule tshi wanwa nga muhovheleli.”</h2>
-            <h3>“That which is far is only reached by those who reach out.”</h3>
-            <h4> -- The Dexter Motto. </h4><br>
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="footer-text">
+            
+            <h5>Contact Info : 068 550 1983
+
+                DEXTERTUITION@GMAIL.COM
+                
+                WWW.DEXTERTUITION.CO.ZA</h5>
+
+            <h5>Physical Address :
+                    36 TIAWAN CRESCENT
+                    COSMO CITY EXT 8
+                    JOHANNESBURG
+                    2188
+            </h5>
+
+            <h5>Director Information : 081 215 3470
+                NEMBAZHENIT@GMAIL.COM</h5>
+
+
+		<!--still to make changes-->
+                
+        </div>
     
-           <br><img id="container img" src="https://dextertuition.com/wp-content/uploads/2023/01/tinywow_6_12802645-768x1024.png" alt="logo" style="position: absolute;top:0;right: 0;width: 450px;padding: 10px;z-index: -1;opacity: 0.9;border-radius: 50%;"><br>
-           
+    </footer>
+
+</div>
 </body>
-
-<footer class="footer">
-
-    <h1>Contactinfo
-
-        068 550 1983
-        
-        DEXTERTUITION@GMAIL.COM
-        
-        WWW.DEXTERTUITION.CO.ZA</h1>
-
-</footer>
+</html>
+  
