@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                box-sizing: border-box;
+                margin: 1em;
+                font-family: "Pangolin", sans-serif;
+                background-color:dimgrey;
+                color: black;
+                width: 90%;
+                padding: 1em;
+                display: inline-block;
+            }
+
+            .wrapper{
+                padding: 20px;
+                width: 33%;
+                border-radius: 10px;
+                background-color: blue;
+            }
+
+            .wrapper label{
+                display: inline;
+                display: block;
+                margin: 0.5em;
+            }
+
+            .wrapper label input{
+                font-size: 1;
+                padding: 0.5em;
+            }
+
+            .wrapper button[type="button"]{
+                width: 100%;
+                background-color: yellow;
+                color: black;
+                padding: 4px;
+                margin: 2px;
+                border: none;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+<head>
+    <title>Services Qoutation</title>
+        
+</head>
+
+<body>
+    
+    <br />
+    <div id="app">DexterTution Services</div>
+    <h1>Enter Your Details</h1>
+
+    <div class="wrapper">
+
+        <form acton="list.html" method="post" id="form">
+
+        <label id="firstNameField">
+            <input type="text" name="firstNameField" placeholder="First Name"  required />
+        </label>
+         
+        
+        <label id="LastNameField">
+            <input type="text" name="LastNameField" placeholder="Last Name"  required />
+        </label>
+
+        
+        <label id="DateOfBirthField">
+            <input type="numbers" name="DateOfBirthField" placeholder="Date Of Birth"  required />
+        </label>
+
+        <label id="Subject/s">
+            <input type="text" name="Subject" placeholder="Subject"  required />
+        </label>
+
+        <label id="Service">
+            <input type="text" name="Service" placeholder="Type Of Service"  required />
+        </label>
+
+        <a href="list.html">
+            <button type="button" onclick="verifyName()" id="submit_button" name="Submit">Submit</button>
+        </a>
+
+       
+    </form>
+</div>
+
+
+<script type="text/javascript" src="js/app.js"></script>
+
+
+</body>
+</html>
+
+
+
