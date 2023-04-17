@@ -3,11 +3,13 @@
 /*form validation*/
 
 const form = document.getElementById('form');
-const firstName = document.getElementById('firstNameField');
-const lastName = document.getElementById('LastNameField');
+const Name = document.getElementById('NameField');
+const email = document.getElementById('Email');
 const grade = document.getElementById('Grade');
+const school = document.getElementById('SchoolAttended');
 const subject = document.getElementById('Subject/s');
-const service = document.getElementById('Service');
+const tutoring = document.getElementById('FormOfTutoring');
+
 
 form.addEventListener('submit',e => {
     e.preventDefault();
@@ -15,7 +17,10 @@ form.addEventListener('submit',e => {
     validateInputs();
 })
 
-
+const validateEmail = () => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 const setSuccess = (element) => {
     const inputControl = element.parentElement;
@@ -38,17 +43,20 @@ const setErrors = (element,message) => {
 }
 
 const validateInputs = () => {
-    const firstNameValue = firstName.value.trim();
-    const lastNameValue = lastName.value.trim();
+    const nameValue =  Name.value.trim();
+    const emailValue = email.value.trim();
     const gradeValue = grade.value.trim();
     const subjectValue = subject.value.trim();
-    const service = service.value.trim();
+    const schoolValue = school.value.trim();
+    const tutoringValue = tutoring.value.trim();
 
-    if(firstNameValue && lastNameValue === ''){
-        setErrors(firstName,'First Name is required');
+    if(nameValue === ''){
+        setErrors(Name,'First Name is required');
     } else {
-        setSuccess(firstName);
+        setSuccess(Name);
     }
+
+    if()
 
 
 }
