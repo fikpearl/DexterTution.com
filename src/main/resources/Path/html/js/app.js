@@ -3,12 +3,12 @@
 /*form validation*/
 
 const form = document.getElementById('form');
-const Name = document.getElementById('NameField');
-const email = document.getElementById('Email');
-const grade = document.getElementById('Grade');
-const school = document.getElementById('SchoolAttended');
-const subject = document.getElementById('Subject/s');
-const tutoring = document.getElementById('FormOfTutoring');
+const Name = document.getElementById('NameField').innerHTML;
+const email = document.getElementById('Email').innerHTML;
+const grade = document.getElementById('Grade').innerHTML;
+const school = document.getElementById('SchoolAttended').innerHTML;
+const subject = document.getElementById('Subject/s').innerHTML;
+const tutoring = document.getElementById('FormOfTutoring').innerHTML;
 
 
 form.addEventListener('submit',e => {
@@ -17,7 +17,7 @@ form.addEventListener('submit',e => {
     validateInputs();
 })
 
-const validateEmail = () => {
+const validEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
@@ -56,8 +56,23 @@ const validateInputs = () => {
         setSuccess(Name);
     }
 
-    if()
+    if(emailValue === ''){
+        setErrors(email,'Email is required');
+    } else if (!validEmail(emailValue)){
+        setErrors(email,'Please provide a valid Email address');
+    } else{
+        setSuccess(email);
+    }
 
+    if(gradeValue === ''){
+        setErrors(grade,'Please enter your grade');
+    } else if(isNaN(gradeValue)){
+        setErrors(grade,'Please enter a valid grade');
+    } else{
+        setSuccess(grade);
+    }
+
+    /*still to add more */
 
 }
 

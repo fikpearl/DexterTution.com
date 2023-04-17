@@ -3,24 +3,27 @@
     <head>
         <style>
             body{
-                box-sizing: border-box;
-                margin: 1em;
-                font-family: "Pangolin", sans-serif;
-                background-color:dimgrey;
-                color: black;
-                width: 90%;
-                padding: 1em;
-                display: inline-block;
+                background-image:url(https://media.istockphoto.com/id/1444142886/photo/teacher-and-student-giving-each-other-a-high-five-in-a-library.jpg?b=1&s=170667a&w=0&k=20&c=IPc4IrnlGSDlJEVEdMVg_N5kEbKeg1xBFjAmgD5y7c0=);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width:1000px;
+                padding: 10px;
+                z-index: -1;
+                opacity: 0.7;
+                border: 50%;
+                font-family: "Brush Script MT", cursive;
             }
 
-            .wrapper{
-                padding: 20px;
-                width: 33%;
-                border-radius: 10px;
-                background-color: blue;
+            .container{
+                width: 500px;
+                margin-inline: auto;
+                padding: 30px;
+                background-color: white;
+                border-radius: 4px;
+                font-size: 12px;
             }
 
-            .wrapper label{
+            .container label{
                 display: inline;
                 display: block;
                 margin: 0.5em;
@@ -31,65 +34,116 @@
                 padding: 0.5em;
             }
 
-            .wrapper button[type="button"]{
+            .container button[type="button"]{
+                padding: 10px;
+                margin-top: 10px;
                 width: 100%;
-                background-color: yellow;
-                color: black;
-                padding: 4px;
-                margin: 2px;
+                color: white;
+                background-color: rgb(41, 57, 194);
                 border: none;
-                border-radius: 2px;
-                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            .input-control {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .input-control input {
+                border: 3px solid darkgrey;
+                border-radius: 4px;
+                display: block;
+                font-size: 12px;
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .input-control input:focus {
+                outline: 0;
+            }
+            
+            .input-control.success input {
+                border-color: #09c372;
+            }
+            
+            .input-control.error input {
+                border-color: #ff3860;
+            }
+            
+            .input-control .error {
+                color: #ff3860;
+                font-size: 9px;
+                height: 13px;
+            }
+
+            #logoSize{
+                width: 200px;
+                height: 110px;
+                margin-inline: auto;
             }
 
         </style>
     </head>
 
 <head>
-    <title>Services Qoutation</title>
+    <title>Dexter Services</title>
         
 </head>
 
 <body>
     
-    <br />
-    <div id="app">DexterTution Services</div>
-    <h1>Enter Your Details</h1>
+    <div class="container">
 
-    <div class="wrapper">
+        <img id="logoSize" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0PDQ0NDQ0NDQ0NDw8NDQ0NFREWFhYRFRUYHTQgJBolGxUVITEiJSk3Li46Fx8zODMsNyktLisBCgoKDg0OGxAQGislHBs3MjY3KzctLjMwNzcrMys3NzgtNi83Ky01Ly0tLS8tLS0tKysrLTYtLS0tNS0tKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEBAAIDAQEAAAAAAAAAAAAAAQUGAwQHAgj/xABDEAACAgIBAQUEAwsKBwAAAAAAAQIDBBEFEgYTITFBByJRYRRxdCMyNDU2dYGRkrO0FRZCUmJyobGywSQzU2RzgrX/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBQT/xAAiEQEAAgICAAcBAAAAAAAAAAAAAQIDEQQSExQhIjFBcQX/2gAMAwEAAhEDEQA/APcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAKQACkAApAAKQoEKQAUAAAQoAEKABCgAQoAEKBACgAQAUAgFBABQQAUAgFBABQQAUEAFBABQQAUEAFBABQQAUEAFBCgAABAUAQFAEBQBAUAQFAEBQBAUAQFAEBQBAUAQFAEBQBAUAQFAEKAABABSA6uXyFVPhOW5a30xW2UvetI3adQmImZ1DtgxuByquscOjpWm097b0ZEjFmplr2pO4Tas1nUqCA0VUGPr/DrfsmP+8tO+BQQAUEAFBABQQAUEAFBABQQAUAgFBABQQAUAAcV18K1uclH63rZq3JWxsunOL3Ftaf6Ec3ONvIl8lHX1aJi21YtN+VlR1TXGPjKPU29+UV8XtHC5GTJy8vl6xqIn5/HspFcVPEmX1wSf0iLS2lGXU/gtHT7W9psnGyHj0KEEoRk5yXVNt/D0/wADGZftOqh4YuE2v61s41r9mKf+ZtXDSxuSx6M6eNX3lkNNTUbHFxk01trxW0zs8PhzxKav6ufyM3mJ1jnUsB2K5TLyMyfe22W191Jy34wjLa18l6m9HzCuMVqEVFeiikl/gdbjFkqt/SnW7Op67lNQ6fTz9fM3vaLTuI0jFSaV6zO3HX+HW/ZMf95aYDtBynJvlsfjcC3FpVmBdmTsyaLL/GFsYdK6Zr+t/gZ+v8Ot+yY/7y017K/KrE/MeX/FVFGrk4Lns2X8qYudGj6bxsVNW4ymse+qdbnXPpk9p+601s4exmXzebRg52Rk4P0bJqhfOirFuhcoyjtRU3a1vevHRwY3407T/Y8L9xafHsw5LPlx/F0T4yVeIsOtLO+lUSjKKr92XdL3vF6WvTYHLLtfkU4PNTyIVvN4zJtx6YRi4wv61F4r1vfvdcU/qZO2XJ83x+Cs6u/C1VViRvpsxrZylkWWRhNxkrElHc1pa9PMxHa6in+dHGUyu6a8yOPdl0dO4zux5WyxnJ+nVLqXz7pGwe1r8R5f/kwv4uoDh7Rcny/H4NUrL8O3LyORxMWuyGNbCiFV0lH3oOzbae3vZlKpcrjY2bdm5GJfKvHnZjrHx7KFGcYSb6+qx7X3vlr1MX7V5yjg4UoQ7yceX42UK1JRdk1btQ2/Bbfht/EyF2fmZHH8k8zj5YDji3qtSyKcnvU6p7fueWvDz+IGty5/nquLxuXsyOPnTdHCtljxxL4WdF0oLp6+91tdfnr0PRb1N1y7pxjY4Pu5TTlCM9eDaXmtnk8cvLzON4rgsfEjKV3FcVmrKnkRriqYTr69QcdtppeCe/eR64l4AaFgZ/aCzk8jj5ZfHf8AC04uRZNYd67yFspLpX3Xwa6H4/Mz/A8vdkZ3LY1ih3eFfj109MWpdM6IzfU9+L22Y7ifyl5b83cZ/ruPrsl+Nu0X2vD/AIWAHRs7XZi4bkM9Knv8XkMjFqXRLu+6hlqpdS6vPpfxOft1yfL4NccrFvw1jytxKFVdjW2Wqdtka3LrViWty3rXoazd+TPM/nnM/wDoxNp9p34qq+38V/FVgcnK8nyWBRg/SLcW6/I5TFxZzqosrr+j2S00oubfV5+O/wBBx53J8tkctl4GDdh49eJjYlzlk49t87JXOfrGxJJdBye0X7zivz3x3+tnzw35Scz9g4r/ADuA6mN2n5CHH89O9488viJ3112VVzrotcaI2RcoOTfnLXmd+/tVKfFcfyOOoby8jjapxmm1FXZEKrY635rqkv0GtZT1gdt3/wBxlfwVZ1Zr6JQ+N8q/5S7P8jiLy1j35dKsiv7tsZ/toD1shQBCgACFAHy4re9Lfx9TWvaPFvisjS3p1N69F3kfE2ckkmmmtp+DT8Uyaz1naLRuNPznVVOfhCEpv4Qi5f5HtvYTEto4zGrug4T1OXRLwlGMptra+Omd3mZOmlOrVb64rcEl4eJg6+Qv6l91l5r136mHM/q1rbw5rKeNwZ13iWV53nlhzhB1Oxzi5b6unWnoyXH5KvpruS6VZBS6X4636Fvw6bdO2qFjS8HOKlr9Zy1wjFKMUoxS0opaSXwSLVi3aZmfRra1OkREe77l0a/w637Jj/vLTU+0HJUYXaPEyMmTrp/kfJq7zonOPePIraj7qfjqL/UbZX+HW/ZMf95ad9pfA0ZNC4G15d/aHkK67I4uRTTTjztrlU73VRNSnGMlvp3JJP1Pv2b9pcFcdxeC7mstYtNTpdVqasUPGLbjr0fqb14BJfBAeX5eDdyGHzfKwg/pEcyNvGbTU3Tx7+56/vyV37fzMx7Q8pZfZuy+qMmr1x9sYpNySeTS2mvl/sbxoaA0v2qTUcLCm99NfLcbZNpOTjCNu5S0vHwSZkMntBh5+FyMcS7vZV4d7mu7shpSrml98l8GbI9BJfIDzJ12YvFdmOUhB9eBXg05Uel9f0K+qFdvh5+6+iX/AKnpqexpFA1DioP+cnKy0+l8dxqUtPTalbtb/SjHcdzmLx3L84syyVHf5GJZTuq2SsgsaKck4xfhtaN/DS+AHkrjKfZblJxhPV3K5V1W4STnVLkIuMkmt6aNq9pcHLi6lFNv6dxb0k29LKrbZuGkGBqftDi3DitJvXNce3pN6XW/Ex0+Xx+P7Q8nZmTlTXfg8cqZuuycbHB29STin5bRvrDSYHlkZ/SOK7YX1RnKrJtyp0S6Jx72P0OuO4prfmmjuduOFnbT2fzak+vGy+Lqv6U9vFndTJ7+SnCt/I9G8PLw+ooFAAEKQoAAgFPKfaVnXw5HojdZXBY9TjGM5Qj4uW3pM9WOK3Hrn4zrhNrwTlFS0v0l8d+s7Z5ad6621n2cWzu41O2Urfu9qTsbm+lNeG389mzqmC/oR/ZR9QhGKSjFRS8lFJJFK31a29L0ia1iFABCWPr/AA637Jj/ALy0yB89EduWl1NKLlpdTS3pb+Hi/wBZ9AdHkeOhem/vbeiUK7Ny9xuMlvSf9pnSXEW+K3VXGfdJwqi4xrVds5xUV8+vx+ozRQNe/m9N9UZWRhGce7slWvftrfQ2pb8P6Gl8pSD4G9uU3kKUp9Lti4votnGNUU9b8OpVyUl69S+HjsIAxFHEtPK6o1dORBRUYpNQ1XGPT97977u/9iYvDuu6uacOmtxacYtT6VR3bqXp0b9/6/T1MwAMFLgXpRjOL/5sVKe3KpOa7udf9qEIxivq3vz3xZPZ2dsFCVsUoRVcGo9TcYxtUXLfruxb1/V8GvTYgBi7+LlK2y+Mo95KVEoppaShpuLlrfjp/L5HDj8XfUkoyrlq2u7cnOO5KpQcfLy8GzNADDZXCddtt/VFznOpqEl9zcIqClCeltp9H1L4ee+Czs7uPg63NxojtwX9C6Vjim0/d01FbXlFGwADAvs+5OTlOMozdknVKPVCE5XQnuO/Tpglr9PqyZHA2yc3G9R8MmFcFH3FVdKyUk/Xe5w8v+mjPgDq4+HCM3dKuCvktTnHb2tRWtv5Qj+o7QAAAAAABAUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAABCgAQoAEBQBCgAAABAUAQoAAhQAIUACFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z" alt="logo" >
 
-        <form id="form" action="/submit_form" method="post">
 
-        <label id="NameField">
-            <input type="text" name="NameField" value="Name"  required />
-        </label>
-         
-        
-        <label id="Email">
-            <input type="email" name="Email" value="Email"  required />
-        </label>
+        <form id="form" action="/">
 
-        <label id="Grade">
-            <input type="numbers" name="Grade" value="Grade"  required />
-        </label>
-        
-        <label id="SchoolAttended">
-            <input type="text" name="SchoolAttended" value="School Attended"  required />
-        </label>
+            <h1>Qoutation</h1>
 
-        <label id="Subject/s">
-            <input type="text" name="Subject" value="Subject"  required />
-        </label>
-
-        <label id="FormOfTutoring">
-            <input type="text" name="FormOfTutoring" value="Form Of Tutoring"  required />
-        </label>
-
-        <a> <!--pressing submit to send an email to user with qoute using user's details-->
-            <button type="button" id="submit_button" name="Submit">Submit</button>
-        </a>
-
+            <div class="input-control"> 
+            <label id="NameField">
+                <input type="text" name="NameField" placeholder="Name"  required />
+            </label>
+            <div class="error"></div>
+            </div>
+             
+            <div class="input-control"> 
+                <label id="Email">
+                    <input type="email" name="Email" placeholder="Email"  required />
+                </label>
+                <div class="error"></div>
+            </div>
        
+            <div class="input-control">
+                <label id="Grade">
+                    <input type="numbers" name="Grade" placeholder="Grade"  required />
+                </label>
+                <div class="error"></div>
+            </div>
+            
+            <div class="input-control">
+                <label id="SchoolAttended">
+                <input type="text" name="SchoolAttended" placeholder="School Attended"  required />
+                </label>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label id="Subject/s">
+                <input type="text" name="Subject" placeholder="Subject"  required />
+                </label>
+            <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label id="FormOfTutoring">
+                    <input type="text" name="FormOfTutoring" placeholder="Form Of Tutoring"  required />
+                </label>
+                <div class="error"></div>
+            </div>
+        <!--pressing submit to send an email to user with qoute using user's details-->
+         <button type="button" id="submit_button" name="Submit">Submit</button>
     </form>
 </div>
 
