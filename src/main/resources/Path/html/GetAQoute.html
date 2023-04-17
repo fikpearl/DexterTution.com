@@ -58,32 +58,32 @@
 
     <div class="wrapper">
 
-        <form action="/submit_form" method="post">
+        <form id="form" action="/submit_form" method="post">
 
         <label id="firstNameField">
-            <input type="text" name="firstNameField" placeholder="First Name"  required />
+            <input type="text" name="firstNameField" value="First Name"  required />
         </label>
          
         
         <label id="LastNameField">
-            <input type="text" name="LastNameField" placeholder="Last Name"  required />
+            <input type="text" name="LastNameField" value="Last Name"  required />
         </label>
 
         
         <label id="Grade">
-            <input type="numbers" name="Grade" placeholder="Grade"  required />
+            <input type="numbers" name="Grade" value="Grade"  required />
         </label>
 
         <label id="Subject/s">
-            <input type="text" name="Subject" placeholder="Subject"  required />
+            <input type="text" name="Subject" value="Subject"  required />
         </label>
 
         <label id="Service">
-            <input type="text" name="Service" placeholder="Type Of Service"  required />
+            <input type="text" name="Service" value="Type Of Service"  required />
         </label>
 
-        <a href="list.html">
-            <button type="button" onclick="verifyName()" id="submit_button" name="Submit">Submit</button>
+        <a> <!--pressing submit to send an email to user with qoute using user's details-->
+            <button type="button" id="submit_button" name="Submit">Submit</button>
         </a>
 
        
