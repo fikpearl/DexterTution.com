@@ -72,8 +72,23 @@ const validateInputs = () => {
         setSuccess(grade);
     }
 
-    /*still to add more */
+    if(subjectValue === ''){
+        setErrors(subject,'Please enter a subject')
+    } else {
+        setSuccess(subject);
+    }
 
+    if(schoolValue === ''){
+        setErrors(school,'Please enter a school');
+    } else {
+        setSuccess(school);
+    }
+
+    if(tutoringValue === ''){
+        setErrors(tutoring,'Please state a form of tutoring');
+    } else {
+        setSuccess(tutoring);
+    }
 }
 
 

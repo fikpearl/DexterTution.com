@@ -54,8 +54,8 @@
                 border-radius: 4px;
                 display: block;
                 font-size: 12px;
-                padding: 10px;
-                width: 100%;
+                padding: 7px;
+                width: 60%;
             }
             
             .input-control input:focus {
@@ -77,7 +77,7 @@
             }
 
             #logoSize{
-                width: 200px;
+                width: 300px;
                 height: 110px;
                 margin-inline: auto;
             }
@@ -87,7 +87,7 @@
 
 <head>
     <title>Dexter Services</title>
-        
+    <script defer src="./app.js"></script>
 </head>
 
 <body>
@@ -102,55 +102,44 @@
             <h1>Qoutation</h1>
 
             <div class="input-control"> 
-            <label id="NameField">
-                <input type="text" name="NameField" placeholder="Name"  required />
-            </label>
+            <label id="NameField" for="name">Name</label>
+                <input type="text" name="NameField"  required />
             <div class="error"></div>
             </div>
              
             <div class="input-control"> 
-                <label id="Email">
-                    <input type="email" name="Email" placeholder="Email"  required />
-                </label>
+                <label id="Email" for="email">Email</label>
+                    <input type="email" name="Email" required />
                 <div class="error"></div>
             </div>
        
             <div class="input-control">
-                <label id="Grade">
-                    <input type="numbers" name="Grade" placeholder="Grade"  required />
-                </label>
+                <label id="Grade" for="grade">Grade</label>
+                    <input type="numbers" name="Grade"  required />
                 <div class="error"></div>
             </div>
             
             <div class="input-control">
-                <label id="SchoolAttended">
-                <input type="text" name="SchoolAttended" placeholder="School Attended"  required />
-                </label>
+                <label id="SchoolAttended" for="schoolAttended">School Attended</label>
+                <input type="text" name="SchoolAttended" required />
                 <div class="error"></div>
             </div>
 
             <div class="input-control">
-                <label id="Subject/s">
-                <input type="text" name="Subject" placeholder="Subject"  required />
-                </label>
+                <label id="Subject/s" for="subject">Subject</label>
+                <input type="text" name="Subject" required />
             <div class="error"></div>
             </div>
 
             <div class="input-control">
-                <label id="FormOfTutoring">
-                    <input type="text" name="FormOfTutoring" placeholder="Form Of Tutoring"  required />
-                </label>
+                <label id="FormOfTutoring" for="formOfTutoring">Form Of Tutoring</label>
+                    <input type="text" name="FormOfTutoring" required />
                 <div class="error"></div>
             </div>
         <!--pressing submit to send an email to user with qoute using user's details-->
          <button type="button" id="submit_button" name="Submit">Submit</button>
     </form>
 </div>
-
-
-<script type="text/javascript" src="js/app.js"></script>
-
-
 </body>
 </html>
 
