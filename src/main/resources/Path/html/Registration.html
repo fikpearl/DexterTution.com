@@ -169,30 +169,37 @@
         }
 
         .wrappertwo {
-            overflow: auto;
+            
             float: left;
-            padding: 40px;
+            padding: 100px;
             width: 400px;
             border-radius: 100px;
-            background-color: #73AD21;
+            background-image:url(https://images.pexels.com/photos/5445607/pexels-photo-5445607.jpeg?auto=compress&cs=tinysrgb&w=400);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            opacity: 0.7;
+            z-index: -1;
         }
 
         .wrapperthree{
             overflow: auto;
             float:right;
-            padding: 40px;
+            padding: 100px;
             width: 400px;
             border-radius: 100px;
             background-color: #73AD21;
         }
 
         .wrapperfour{
-            overflow: auto;
             float: right;
             padding: 100px;
             width: 400px;
-            border-radius: 4000px;
-            background-color: #89cff0;
+            border-radius: 100px;
+            background-image:url(https://images.pexels.com/photos/8386727/pexels-photo-8386727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            opacity: 0.7;
+            z-index: -1;
         }
 
 
@@ -257,6 +264,59 @@
             clear:both;
         }
 
+        /*form style*/
+    
+        .containerform {
+            
+            width: 400px;
+            margin-inline: auto;
+            padding: 50px;
+            background-color: white;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .container button[type="submit"]{
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: white;
+            background-color: rgb(41, 57, 194);
+            border: none;
+            border-radius: 4px;
+        }
+
+        .input-control {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .input-control input {
+                border: 3px solid darkgrey;
+                border-radius: 4px;
+                display: block;
+                font-size: 12px;
+                padding: 7px;
+                width: 60%;
+            }
+            
+            .input-control input:focus {
+                outline: 0;
+            }
+            
+            .input-control.success input {
+                border-color: #09c372;
+            }
+            
+            .input-control.error input {
+                border-color: #ff3860;
+            }
+            
+            .input-control .error {
+                color: #ff3860;
+                font-size: 9px;
+                height: 13px;
+            }
 
 
     </style>
@@ -428,7 +488,7 @@
 
         <br><h1><strong></strong></h1><br>
     
-            <div class="wrappertwo" style="background-color:#89cff0">
+            <div class="center" style="background-color:#89cff0;border-radius:100%;">
                 <p> 
                     <h3>We offer tutoring
                         lessons for the
@@ -439,51 +499,166 @@
                 </p>
             </div>
             
-            <div class="wrapperthree">
+            <div class="containerform" >
             
-                <p> 
-                    <h3>REGISTRATION FORM</h3>
+                    <div>
 
-                    <div >
+                        <div class="wrappertwo" >
+                            
+                            <h3>REGISTRATION FORM</h3>
 
-                        <form action="/submit_form" method="post">
-                
-                        <label id="firstNameField">
-                            <input type="text" name="firstNameField" placeholder="First Name"  required />
-                        </label>
+                            <form id="form" action="/">
+                    
+                                <div class="input-control"> 
+                                <label id="NameSurnameField" for="namesurname">Parent Name & Surname</label>
+                                    <input type="text" name="NameSurnameField"  required />
+                                <div class="error"></div>
+                                </div>
+                                 
+                                <div class="input-control"> 
+                                    <label id="Email" for="email">Email</label>
+                                        <input type="email" name="Email" required />
+                                    <div class="error"></div>
+                                </div>
+                           
+                                <div class="input-control">
+                                    <label id="Contact" for="contact">Contact</label>
+                                        <input type="number" name="Contact"  required />
+                                    <div class="error"></div>
+                                </div>
+                                
+                                <div class="input-control">
+                                    <label id="Address" for="address">Province (Entre your full residential address. This information will assist us match you with a excellent tutor within your area.)</label>
+                                    <input type="text" name="Address" required />
+                                    <div class="error"></div>
+                                </div>
+                    
+                                <div class="input-control">
+                                    <label id="Relationship" for="relationship">Your relationship with the learner</label>
+                                    <select id="cars" name="cars">
+                                        <option value="mother">Mother</option>
+                                        <option value="father">Father</option>
+                                        <option value="gaurdian">Gaurdian</option>
+                                        <option value="sponsor">Sponsor</option>
+                                        <option value="sibling">Sibling</option>
+                                        <option value="learner">I am the Learner!</option>
+                                      </select>
+                                <div class="error"></div>
+                                </div>
+
+                                <button type="submit" class="container button" id="submit_button">Submit</button>
+                        </form>
+                    </div>
+
+
+                <div class="wrapperfour">
+
+                    <h3>LEARNER INFO</h3>
+
+                    <form id="form" action="/">
+            
+                        <div class="input-control"> 
+                        <label id="NameLearnerField" for="namelearner">Learner Name & Surname</label>
+                            <input type="text" name="NameLearnerField"  required />
+                        <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="Gender" for="Gender">Gender Of Learner</label>
+                            <select id="choosetutor" name="choosetutor">
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                              </select>
+                                
+                            <div class="error"></div>
+                        </div>
                          
+                        <div class="input-control"> 
+                            <label id="LearnerGrade" for="learnergrade">Grade</label>
+                                <input type="number" name="learnergrade" required />
+                            <div class="error"></div>
+                        </div>
+                   
+                        <div class="input-control">
+                            <label id="school" for="school">School Attended</label>
+                                <input type="text" name="school"  required />
+                            <div class="error"></div>
+                        </div>
                         
-                        <label id="LastNameField">
-                            <input type="text" name="LastNameField" placeholder="Last Name"  required />
-                        </label>
-                
+                        <div class="input-control">
+                            <label id="curriculum" for="curriculum">Curriculum</label>
+                            <input type="text" name="curriculum" required />
+                            <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="subject" for="subject">Subjects You Require Tutoring For:</label>
+                            <input type="text" name="subject" required />
+                            <div class="error"></div>
+                        </div>
+            
+                        <div class="input-control">
+                            <label id="Tutor" for="tutor">What kind of Tutor do you need?</label>
+                            <select id="choosetutor" name="choosetutor">
+                                <option value="schoolsubjecttutoring">School Subject Tutoring</option>
+                                <option value="universitytutoring">University Tutoring</option>
+                                <option value="adulttutoring">Adult Tutor</option>
+                              </select>
+                        <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="mark" for="mark">Most recent term mark for each subject: (Kindly add all subjects that your child needs assistance with.)</label>
+                            <input type="text" name="mark" required />
+                            <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="language" for="language">Language Of Instruction:</label>
+                            <input type="text" name="language" required />
+                            <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="barriers" for="barriers">Specific tutoring requirements or learning barriers:</label>
+                            <input type="text" name="barriers" required />
+                            <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="weaknesses" for="weaknesses">Are the learners schools teachers open to us communicating with them, regarding the learners weaknesses?  </label>
+                            <select id="choose" name="choose">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                              </select>
+                            <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label id="start" for="start">How urgently do you need the lessons to start?</label>
+                            <select id="choosestart" name="choosestart">
+                                <option value="asap">ASAP</option>
+                                <option value="followingweek">The following week</option>
+                                <option value="enquiringfornow">Enquiriing For Now</option>
+                              </select>
+                            <div class="error"></div>
+                        </div>
+
+
+            
                         
-                        <label id="Grade">
-                            <input type="numbers" name="Grade" placeholder="Grade"  required />
-                        </label>
-                
-                        <label id="Subject/s">
-                            <input type="text" name="Subject" placeholder="Subject"  required />
-                        </label>
-                
-                        <label id="Service">
-                            <input type="text" name="Service" placeholder="Type Of Service"  required />
-                        </label>
-                
-                        <a href="list.html">
-                            <button type="button" onclick="verifyName()" id="submit_button" name="Submit">Submit</button>
-                        </a>
-                
-                       
-                    </form>
-                </div>                                             
-                </p>
-            </div>
+                    <!--pressing submit to send an email to user with qoute using user's details-->
+                     <button type="submit" class="container button" id="submit_button">Submit</button>
+                </form>
+        </div> 
+            
+         </div>
+
+
+            
     
 </div>
-
-
-
    <footer class="footer">
 
         <div class="footer-text">

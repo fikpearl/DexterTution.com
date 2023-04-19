@@ -34,7 +34,7 @@
                 padding: 0.5em;
             }
 
-            .container button[type="button"]{
+            .container button[type="submit"]{
                 padding: 10px;
                 margin-top: 10px;
                 width: 100%;
@@ -87,7 +87,10 @@
 
 <head>
     <title>Dexter Services</title>
-    <script defer src="./app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/app.js"></script>
 </head>
 
 <body>
@@ -115,7 +118,7 @@
        
             <div class="input-control">
                 <label id="Grade" for="grade">Grade</label>
-                    <input type="numbers" name="Grade"  required />
+                    <input type="number" name="Grade"  required />
                 <div class="error"></div>
             </div>
             
@@ -137,7 +140,7 @@
                 <div class="error"></div>
             </div>
         <!--pressing submit to send an email to user with qoute using user's details-->
-         <button type="button" id="submit_button" name="Submit">Submit</button>
+         <button type="submit" class="container button" id="submit_button">Submit</button>
     </form>
 </div>
 </body>

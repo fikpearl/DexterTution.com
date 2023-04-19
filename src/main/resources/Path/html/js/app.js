@@ -91,6 +91,7 @@ const validateInputs = () => {
     }
 }
 
+/*code to collect data from form*/
 
 
 
